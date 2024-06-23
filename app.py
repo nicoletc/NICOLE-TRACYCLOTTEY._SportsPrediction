@@ -3,7 +3,7 @@ import pickle as pkl
 import numpy as np
 
 # Load the pickled model
-@st.cache(allow_output_mutation=True)
+@st.cache_data(allow_output_mutation=True)
 def load_model():
     with open('rf_model.pkl', 'rb') as file:
         model = pkl.load(file)
